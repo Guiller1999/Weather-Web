@@ -135,7 +135,7 @@ body {
 @media screen and (max-width: 400px) {
     
     .container-search input {
-        font-size: .5rem;
+        font-size: .8rem;
     }
 
     .container-search input::placeholder {
