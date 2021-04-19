@@ -11,16 +11,17 @@ class RenderUI {
     }
 
     // Método que convierte de grados Farenheit a Celsisus
-    farenheitToCelsius(temp) {
-        let tempFarenheit = parseFloat(temp);
-        let tempCelsius = Math.round((((tempFarenheit - 32) * 5) / 9) - 122.08333);
+    kelvinToCelsius(temp) {
+        console.log(temp);
+        let tempKelvin = parseFloat(temp);
+        let tempCelsius = Math.round(tempKelvin - 273.15);
 
         return tempCelsius;
     }
 
     // Método en el cual se imprime la información extraida de la API en cada componente de la web
     render() {
-        let tempCelsius = this.farenheitToCelsius(this.data['main']['temp'] + '°F')
+        let tempCelsius = this.kelvinToCelsius(this.data['main']['temp'] + '°F')
         this.temperature.textContent = tempCelsius + ' °C';
         this.location.textContent = this.data['name'] + '/' + this.data['sys']['country'];
         this.icon.src = `http://openweathermap.org/img/wn/${this.data['weather'][0]['icon']}@2x.png`;
