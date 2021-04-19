@@ -1,0 +1,157 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+.container {
+    min-height: 100%;
+    width: 50%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    text-align: center;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 20px;
+}
+
+.container-card-information {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 0 10px;
+    justify-items: space-between;
+}
+
+.card, .container-weather {
+    background-color: rgba(255, 255, 255, .15);  
+    backdrop-filter: blur(5px);
+    padding: 40px;
+}
+
+.card {
+    text-align: center;
+}
+
+.container-weather {
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-rows: auto, auto, auto;
+}
+
+.temperature, .location, .container-img-temperature {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;   
+}
+
+.container-search {
+    background-color: #ecf0f1;
+    border: none;
+    border-radius: 50px;
+    display: grid;
+    grid-template-columns: 85% 15%;
+    height: 40px;
+}
+
+.container-search input {
+    border: none;
+    outline: none;
+    background: none;
+    text-align: center;
+    font-size: 1.1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.container-search input::placeholder {
+    font-size: 1.1rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
+
+.container-search button {
+    border: none;
+    outline: none;
+    background: none;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .container-search input {
+        font-size: .8rem;
+    }
+
+    .container-search input::placeholder {
+        font-size: .8rem;
+    }
+
+    .container-card-information {
+        gap: 5px;
+        font-size: .8rem;
+    }
+    
+    .card, .container-weather {
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    
+    .container {
+        width: 70%;
+    }
+
+    .container-search input {
+        font-size: .5rem;
+    }
+
+    .container-search input::placeholder {
+        font-size: .8rem;
+    }
+
+    .container-card-information {
+        gap: 3px;
+        font-size: .5rem;
+    }
+    
+    .card, .container-weather {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .container-search input {
+        font-size: .5rem;
+    }
+
+    .container-search input::placeholder {
+        font-size: .5rem;
+    }
+
+    .container-card-information {
+        gap: 3px;
+        font-size: .3rem;
+    }
+    
+    .card, .container-weather {
+        padding: 10px;
+    }
+    
+    .container-img-temperature h3 {
+        font-size: .8rem;
+    }
+}
